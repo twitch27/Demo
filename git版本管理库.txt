@@ -1,0 +1,47 @@
+创建user&email：
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+颜色：
+git config --global color.ui true
+创建版本库：
+	mkdir 名字
+	git init
+查看创建好的版本库：
+	ls -ah
+提交到版本库：
+	git add 文件（添加到暂存库，可多个添加）
+	git commit -m“备注”（提交到版本库）
+	
+	git log（查看更改）
+回退版本：
+	git reset --hard HEAD^（上个版本）
+	git reset --hard HEAD^^(上上个版本)
+	git reset --hard HEAD~（版本号）
+生成秘钥：
+ssh-keygen -t rsa -C "your_email@youremail.com"
+生成的秘钥在：C:\Users\HAN\.ssh
+添加秘钥：
+ssh -T git@github.com
+打开github，点击头像下拉，点击设定值，点击SSH和GPG秘钥
+点击填入
+
+使用SSH  不要使用http，因为慢，不要翻译。
+复制第一段倒数第二行和倒数第一行。填入mingw64
+
+连接远程仓库：
+git remote add origin git@github.com:yourName/repositoryname.git
+推送到远程仓库：
+git push origin master
+删除远程库
+查看是否连接  git remote -v
+根据名字删除  git remote rm “name”
+
+克隆远程库：git clone
+
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>或者git switch <name>
+创建+切换分支：git checkout -b <name>或者git switch -c <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>

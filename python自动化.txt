@@ -1,0 +1,82 @@
+MeterSphere：
+一站式开源持续测试平台
+https://demo.metersphere.com/login#/track/home
+MeterSphere：
+	账号：demo
+	密码：P@ssw0rd123..
+python3.9
+https://blog.csdn.net/qq_38822392/article/details/108946831
+第一步：首先我们需要安装python的编译环境我们可以直接安装环境包组的方式来实现
+
+yum groupinstall "Development tools" -y
+
+这里我们不就详细的说明怎么搭建yum源了
+
+第二步：下载python3.9
+
+wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz
+wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tar.xz
+
+ 
+
+第三步：解压下载后的文件
+
+tar -zxvf Python-3.9.0.tgz
+
+cd 进入文件
+./configure --prefix=/usr/local/python3.9
+
+第四步：进入解压后的目录
+
+./configure --prefix=/usr/local/python3.9  这里需要先创建目录
+
+一定要做编译
+
+make && make install
+
+等待安装完成
+
+我们用命令调用python时发现还是2.7的版本默认调用的是/usr/bin/python所以我们需要创建一个软件连接
+
+第五部 创建软连接
+
+mv /usr/bin/python /usr/bin/python.bak
+
+ln -s /usr/local/python3.9/bin/python3.9 /usr/bin/python
+
+到这里我们就已经完成了python源码包的安装全过程
+————————————————
+node.js：
+https://www.cnblogs.com/easth/p/linux_install_nodejs.html
+https://blog.csdn.net/qq_34462698/article/details/114549461
+、
+usr/bin/node.js
+
+——————————————————
+mysql：
+https://blog.csdn.net/wwd0501/article/details/71171614
+
+1、下载
+
+　　　　下载地址：http://dev.mysql.com/downloads/mysql/5.6.html#downloads
+
+　　　　下载版本：我这里选择的5.6.33，通用版，linux下64位
+
+　　　　也可以直接复制64位的下载地址，通过命令下载：wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.33-linux-glibc2.5-x86_64.tar.gz
+
+卸载老版本MySQL(新安装的系统千万别删除)：
+查找：find / -name mysql
+删除：rm -rf 上边查找到的路径，多个路径用空格隔开
+find / -name mysql|xargs rm -r
+解压：
+tar -zxvf mysql-5.6.31-linux-glibc2.5-x86_64.tar.gz
+
+删除安装包
+rm -rf mysql-5.6.31-linux-glibc2.5-x86_64.tar.gz
+重命名
+mv mysql-5.6.31-linux-glibc2.5-x86_64.tar.gz/ mysq
+检查是否有mysql 用户
+groups mysql
+————————————————
+
+

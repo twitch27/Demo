@@ -1,0 +1,13 @@
+Android虚拟机和Dos命令
+配置环境path<加入platforms目标地址>
+
+
+adb version ：查看安装
+adb shell ：查看目录
+adb install <安装包位置>：安装apk
+adb shell pm list packages -3 :查看安装后的位置
+adb uninstall <位置>：卸载
+adb remount ：将设备变成可读写状态
+adb push <文件位置> <手机存储文件夹地址>：上传文件
+adb pull </手机存储位置/文件名> :拉下文件
+adb logcat * | find "app的名字"

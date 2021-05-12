@@ -1,0 +1,20 @@
+响应数据：[{"actionId":"save_G_1_zdhflow.1","buttonName":"保存"},{"actionId":"G_1_zdhflow.1","buttonName":"商务技术审核"}]
+
+没有特殊的情况用（.*?）就可以解决所有问题，给大家举例
+
+我们要取得actionId的值
+
+1、正则表达式中复制，"actionId":"save_G_1_zdhflow.1","buttonName"
+
+2、把save_G_1_zdhflow.1替换成（.*?）就可以了
+
+
+
+
+
+
+
+
+如果有响应数据只有数字，譬如返回的是个100， 就不能用.*?，因为？会取最小值，所以去掉就好，改为 （.*）
+
+————————————————
